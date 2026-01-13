@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="LifeRPG.Api/LifeRPG.Api.csproj" />
+  <Project Path="LifeRPG.Application/LifeRPG.Application.csproj" />
+  <Project Path="LifeRPG.Domain/LifeRPG.Domain.csproj" />
+  <Project Path="LifeRPG.Infrastructure/LifeRPG.Infrastructure.csproj" />
+</Solution>
