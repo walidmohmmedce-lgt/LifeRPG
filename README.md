@@ -1,123 +1,111 @@
-LifeRPG API
+# 🎮 LifeRPG API
 
-A gamified backend system built with ASP.NET Core that simulates real-life productivity as an RPG game.
+A gamified backend system built with **ASP.NET Core** that models real-life productivity as an RPG.  
 Users complete quests, earn XP, level up, and unlock achievements — all powered by real business logic and clean architecture.
 
-This project goes beyond CRUD and demonstrates real backend engineering concepts such as progression systems, rule-based logic, persistence, and clean layering.
+This project demonstrates **backend engineering skills beyond basic CRUD**, including domain modeling, rule enforcement, and layered architecture.
 
-Features
-Core System
+---
 
-User registration & login (with secure password hashing)
+## 🧠 Why this project matters
 
-Users gain XP and levels
+LifeRPG was designed to simulate a real-world backend system where:
+- Data is not just stored, but **governed by rules**
+- Actions have **consequences**
+- The system enforces **consistency and business logic**
 
-Quest system with rewards
+It reflects how production systems handle progression, validation, and persistence.
 
-Quest completion tracking
+---
 
-Duplicate quest completion protection
+## ⚙️ Tech Stack
 
-Achievement unlocking system
+- ASP.NET Core Web API  
+- Entity Framework Core  
+- SQL Server  
+- C#  
+- Clean Architecture  
+- Swagger (OpenAPI)  
 
-Persistent progression stored in SQL Server
+---
 
-Business Logic Examples
+## 🏗 Architecture
 
-Completing a quest increases XP
+The project follows **Clean Architecture** principles:
 
-Every 100 XP increases level
+- **LifeRPG.Domain** → Core entities and rules  
+- **LifeRPG.Application** → Business logic and services  
+- **LifeRPG.Infrastructure** → Database & EF Core  
+- **LifeRPG.Api** → Controllers & endpoints  
 
-Achievements unlock automatically when user reaches required level
+This structure improves:
+- Maintainability  
+- Testability  
+- Separation of concerns  
 
-Users cannot complete the same quest twice
+---
 
-Architecture
+## ✨ Core Features
 
-The project follows Clean Architecture principles:
+- User registration  
+- XP and level progression  
+- Quest system with completion tracking  
+- Achievement unlocking system  
+- Rule-based validation:
+  - Users cannot complete the same quest twice  
+  - Achievements unlock automatically when conditions are met  
+- Persistent storage using SQL Server  
+- Swagger UI for API exploration  
 
-LifeRPG.Domain        → Core business entities
-LifeRPG.Application   → Business logic & services
-LifeRPG.Infrastructure→ Database & EF Core
-LifeRPG.Api           → Controllers & API endpoints
+---
 
+## 📌 Example Business Logic
 
-Tech Stack
+- Completing a quest grants XP  
+- Every 100 XP increases the user’s level  
+- Achievements unlock automatically when level conditions are reached  
+- Duplicate quest completion is prevented by the system  
 
-ASP.NET Core Web API
+---
 
-Entity Framework Core
+## 📂 Core Entities
 
-SQL Server
+- User  
+- Quest  
+- QuestCompletion  
+- Achievement  
+- UserAchievement  
 
-C#
+All entities are persisted using **EF Core** with relational modeling.
 
-Clean Architecture
+---
 
-Swagger (OpenAPI)
+## ▶️ How to Run the Project
 
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/walidmohmmedce-lgt/LifeRPG.git
 
-Entities
+2. Open the solution in Visual Studio
 
-The system includes:
+3. Configure your SQL Server connection in:
+   appsettings.json
+4. Apply migrations:
+   Update-Database
+5. Run the project and open Swagger:
+   https://localhost:xxxx/swagger
 
-User
+📄 Purpose of the Project
 
-Quest
+This project was built to:
+Practice professional backend architecture
+Apply business rules beyond CRUD
+Demonstrate readiness for real-world backend development
+Serve as a portfolio project for .NET backend roles
 
-QuestCompletion
-
-Achievement
-
-UserAchievement
-
-All persisted in a relational database using EF Core.
-
-Example Flow
-
-Create user
-
-Create quest
-
-Complete quest
-
-User gains XP
-
-User levels up
-
-Achievement unlocks automatically
-
-Progress saved in database
-
-
-How to Run Locally
-1. Clone the repository
-git clone https://github.com/walidmohmmedce-lgt/LifeRPG.git
-cd LifeRPG
-
-2. Configure database
-
-Update appsettings.json in LifeRPG.Api:
-
-"ConnectionStrings": {
-  "DefaultConnection": "Server=.\\SQLEXPRESS;Database=LifeRpgDb;Trusted_Connection=True;TrustServerCertificate=True"
-}
-
-3. Run migrations
-dotnet ef database update --project LifeRPG.Infrastructure --startup-project LifeRPG.Api
-
-4. Run the project
-dotnet run --project LifeRPG.Api
-
-5. Open Swagger
-
-Navigate to:
-
-http://localhost:XXXX/swagger
-
-
-Author
+👤 Author
 
 Walid Mohmmed
 .NET Backend Developer
 GitHub: https://github.com/walidmohmmedce-lgt
+LinkedIn: https://www.linkedin.com/in/walid-mohmmed-8333583a3
