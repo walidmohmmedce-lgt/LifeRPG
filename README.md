@@ -45,6 +45,12 @@ This structure improves:
 
 ---
 
+## 📸 API Preview (Swagger)
+
+![Swagger UI](swagger.png)
+
+
+
 ## ✨ Core Features
 
 - User registration  
